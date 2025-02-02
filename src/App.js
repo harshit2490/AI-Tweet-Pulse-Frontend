@@ -9,7 +9,7 @@ function App() {
   const handleAITweet = async (withImage = false) => {
     const endpoint = withImage ? "/tweet/ai-image" : "/tweet/ai";
     try {
-      const res = await axios.post(`http://localhost:5000${endpoint}`, { topic });
+      const res = await axios.post(`ai-tweet-pulse-backend-production.up.railway.app${endpoint}`, { topic });
       setResponse(res.data.message);
     } catch (error) {
       setResponse("Error posting tweet.");
